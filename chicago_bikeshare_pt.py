@@ -28,10 +28,7 @@ input("Aperte Enter para continuar...")
 # TAREFA 1
 # TODO: Imprima as primeiras 20 linhas usando um loop para identificar os dados.
 print("\n\nTAREFA 1: Imprimindo as primeiras 20 amostras")
-for i, linha in enumerate(data_list):
-    if(i > 20):
-        break
-    print("\n\nTAREFA 1: Linha {}, Conteudo {}".format(str(i), linha))
+print("\n\n" + str(data_list[:20]))
 
 # Vamos mudar o data_list para remover o cabeçalho dele.
 data_list = data_list[1:]
@@ -44,10 +41,8 @@ input("Aperte Enter para continuar...")
 # TODO: Imprima o `gênero` das primeiras 20 linhas
 
 print("\nTAREFA 2: Imprimindo o gênero das primeiras 20 amostras")
-for i, linha in enumerate(data_list):
-    if(i > 20):
-        break
-    print("\nTAREFA 2: Linha {}, Genero: {}".format(str(i), linha[-2]))
+for linha in data_list[1:20]:
+    print(linha[-2])
 
 # Ótimo! Nós podemos pegar as linhas(samples) iterando com um for, e as colunas(features) por índices.
 # Mas ainda é difícil pegar uma coluna em uma lista. Exemplo: Lista com todos os gêneros
